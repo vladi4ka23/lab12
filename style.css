@@ -1,0 +1,217 @@
+/* Базові стилі для сторінки */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/bg.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed;
+}
+
+/* Контейнер для застосунку */
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #ffffff, #f4f4f4);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.7);
+}
+
+/* Карточка для слів */
+.card {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #f1f1f1, #e0e0e0);
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -2px -2px 4px rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Секція вводу */
+.input-section {
+    margin-bottom: 20px;
+}
+
+#translation-input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#translation-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+#check-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Додано відступ зверху */
+}
+
+#check-button:hover {
+    background-color: #2980b9;
+}
+
+
+/* Прогрес-бар */
+.progress {
+    margin: 20px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Статистика */
+.statistics {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+/* Блок для правильних відповідей */
+.correct {
+    color: #27ae60; /* Зелений текст */
+    font-weight: bold;
+    background-color: rgba(39, 174, 96, 0.1); /* Світлий зелений фон */
+    border: 2px solid #27ae60; /* Зелена рамка */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2); /* М'яка тінь */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.correct:hover {
+    transform: scale(1.05); /* Збільшення при наведенні */
+    box-shadow: 0 6px 10px rgba(39, 174, 96, 0.3); /* Сильніша тінь */
+}
+
+/* Блок для неправильних відповідей */
+.wrong {
+    color: #e74c3c; /* Червоний текст */
+    font-weight: bold;
+    background-color: rgba(231, 76, 60, 0.1); /* Світлий червоний фон */
+    border: 2px solid #e74c3c; /* Червона рамка */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(231, 76, 60, 0.2); /* М'яка тінь */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wrong:hover {
+    transform: scale(1.05); /* Збільшення при наведенні */
+    box-shadow: 0 6px 10px rgba(231, 76, 60, 0.3); /* Сильніша тінь */
+}
+
+
+/* Модальне вікно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #2980b9;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    #translation-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #check-button {
+        width: 100%;
+    }
+
+    .statistics {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .statistics div {
+        margin: 5px 0;
+    }
+}
+.difficulty-selector {
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.difficulty-selector label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#difficulty {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f9;
+    cursor: pointer;
+}
+
